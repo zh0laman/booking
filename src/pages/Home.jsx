@@ -60,46 +60,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>How it works</h2>
-            <p className={styles.sectionDesc}>Three simple steps to book any space</p>
-          </div>
-          <div className={styles.stepsGrid}>
-            {steps.map((step) => (
-              <div key={step.num} className={styles.stepCard}>
-                <span className={styles.stepNum}>{step.num}</span>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDesc}>{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Featured spaces</h2>
-            <Link to="/services" className={styles.viewAll}>View all</Link>
-          </div>
-          <div className={styles.servicesGrid}>
-            {featured.map((s) => (
-              <ServiceCard key={s.id} service={s} onBook={setModalService} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.cta}>
-        <div className={styles.ctaInner}>
-          <h2 className={styles.ctaTitle}>Ready to book your first space?</h2>
-          <p className={styles.ctaDesc}>Join thousands of professionals who use Sula to find and book perfect spaces.</p>
-          <Link to="/register" className={styles.ctaPrimary}>Get started free</Link>
-        </div>
-      </section>
-
       <BookingModal
         service={modalService}
         isOpen={!!modalService}

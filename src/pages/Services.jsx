@@ -21,38 +21,7 @@ export default function Services() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.header}>
-        <div className={styles.headerInner}>
-          <h1 className={styles.title}>Services</h1>
-          <p className={styles.subtitle}>Browse and book workspaces, studios, event venues, and more</p>
-        </div>
-      </div>
-
       <div className={styles.content}>
-        <div className={styles.toolbar}>
-          <div className={styles.searchWrap}>
-            <svg className={styles.searchIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setCurrentPage(1) }}
-              className={styles.searchInput}
-            />
-          </div>
-
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className={styles.sortSelect}>
-            <option value="default">Sort by</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-            <option value="rating">Rating</option>
-            <option value="name">Name</option>
-          </select>
-        </div>
-
         <div className={styles.categories}>
           {categories.map((cat) => (
             <button

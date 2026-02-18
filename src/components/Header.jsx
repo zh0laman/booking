@@ -18,8 +18,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoMark}>S</span>
-          <span className={styles.logoText}>Sula</span>
+          <span className={styles.logoMark}>O</span>
+          <span className={styles.logoText}>Booking</span>
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>

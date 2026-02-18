@@ -11,7 +11,7 @@ export default function Login() {
   const [serverError, setServerError] = useState('')
 
   if (user) {
-    navigate('/dashboard', { replace: true })
+    navigate('..', { replace: true })
     return null
   }
 
@@ -39,7 +39,7 @@ export default function Login() {
     }
     const result = login(form.email, form.password)
     if (result.success) {
-      navigate('/dashboard')
+      navigate('..')
     } else {
       setServerError(result.error)
     }
@@ -64,7 +64,7 @@ export default function Login() {
               value={form.email}
               onChange={handleChange}
               className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-              placeholder="john@example.com"
+              placeholder="username@example.com"
             />
             {errors.email && <span className={styles.error}>{errors.email}</span>}
           </div>

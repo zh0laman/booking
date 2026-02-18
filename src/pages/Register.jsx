@@ -11,7 +11,7 @@ export default function Register() {
   const [serverError, setServerError] = useState('')
 
   if (user) {
-    navigate('/dashboard', { replace: true })
+    navigate('..', { replace: true })
     return null
   }
 
@@ -43,7 +43,7 @@ export default function Register() {
     }
     const result = register(form.name, form.email, form.password)
     if (result.success) {
-      navigate('/dashboard')
+      navigate('..')
     } else {
       setServerError(result.error)
     }
@@ -68,7 +68,7 @@ export default function Register() {
               value={form.name}
               onChange={handleChange}
               className={`${styles.input} ${errors.name ? styles.inputError : ''}`}
-              placeholder="John Doe"
+              placeholder="Michael Jordan"
             />
             {errors.name && <span className={styles.error}>{errors.name}</span>}
           </div>

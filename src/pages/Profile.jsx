@@ -101,7 +101,6 @@ export default function Profile() {
           </div>
 
           <div className={styles.sidebarNav}>
-            <Link to="/dashboard" className={styles.sidebarLink}>Dashboard</Link>
             <Link to="/bookings" className={styles.sidebarLink}>My Bookings</Link>
             <Link to="/services" className={styles.sidebarLink}>Browse Services</Link>
           </div>

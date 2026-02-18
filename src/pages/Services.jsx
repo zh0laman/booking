@@ -22,6 +22,18 @@ export default function Services() {
   return (
     <div className={styles.page}>
       <div className={styles.content}>
+        <div className={styles.categories}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.catBtn} ${category === cat ? styles.catActive : ''}`}
+              onClick={() => handleCategoryChange(cat)}
+            >
+              {categoryLabels[cat] || cat}
+            </button>
+          ))}
+        </div>
+
         {paginated.length > 0 ? (
           <div className={styles.grid}>
             {paginated.map((s) => (

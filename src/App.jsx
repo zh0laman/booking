@@ -8,7 +8,6 @@ import Services from './pages/Services.jsx'
 import Bookings from './pages/Bookings.jsx'
 import Register from './pages/Register.jsx'
 import Login from './pages/Login.jsx'
-import Dashboard from './pages/Dashboard.jsx'
 import Profile from './pages/Profile.jsx'
 
 export default function App() {
@@ -23,14 +22,6 @@ export default function App() {
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
-              <Route
-                path="/dashboard"
-                element={
-                  <PrivateRoute>
-                    <Dashboard />
-                  </PrivateRoute>
-                }
-              />
               <Route
                 path="/profile"
                 element={

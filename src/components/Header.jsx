@@ -42,9 +42,6 @@ export default function Header() {
                 <span className={styles.avatar}>{user.name.charAt(0).toUpperCase()}</span>
                 <span className={styles.userName}>{user.name}</span>
               </Link>
-              <Link to="/dashboard" className={styles.logoutBtn} style={{ textDecoration: 'none' }}>
-                Dashboard
-              </Link>
               <button onClick={logout} className={styles.logoutBtn}>
                 Log out
               </button>

@@ -119,9 +119,6 @@ export default function Profile() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>Personal Information</h2>
-              {!editing && (
-                <button onClick={handleEdit} className={styles.editBtn}>Edit</button>
-              )}
             </div>
 
             {editing ? (
@@ -173,56 +170,6 @@ export default function Profile() {
                 </div>
               </div>
             )}
-          </section>
-
-          <section className={styles.section}>
-            <div className={styles.sectionHeader}>
-              <h2 className={styles.sectionTitle}>Booking Summary</h2>
-              <Link to="/bookings" className={styles.viewAllLink}>View all</Link>
-            </div>
-            <div className={styles.summaryGrid}>
-              <div className={styles.summaryCard}>
-                <span className={styles.summaryValue}>{stats.total}</span>
-                <span className={styles.summaryLabel}>Total</span>
-              </div>
-              <div className={styles.summaryCard}>
-                <span className={styles.summaryValue} data-type="success">{stats.confirmed}</span>
-                <span className={styles.summaryLabel}>Confirmed</span>
-              </div>
-              <div className={styles.summaryCard}>
-                <span className={styles.summaryValue} data-type="error">{stats.cancelled}</span>
-                <span className={styles.summaryLabel}>Cancelled</span>
-              </div>
-              <div className={styles.summaryCard}>
-                <span className={styles.summaryValue}>${stats.totalSpent}</span>
-                <span className={styles.summaryLabel}>Total Spent</span>
-              </div>
-            </div>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Account</h2>
-            <div className={styles.accountRow}>
-              <div className={styles.accountInfo}>
-                <span className={styles.accountInfoTitle}>Password</span>
-                <span className={styles.accountInfoDesc}>Change your account password</span>
-              </div>
-              <button className={styles.secondaryBtn} disabled>Change</button>
-            </div>
-            <div className={styles.accountRow}>
-              <div className={styles.accountInfo}>
-                <span className={styles.accountInfoTitle}>Notifications</span>
-                <span className={styles.accountInfoDesc}>Email notifications for bookings</span>
-              </div>
-              <button className={styles.secondaryBtn} disabled>Configure</button>
-            </div>
-            <div className={styles.accountRow} data-danger="true">
-              <div className={styles.accountInfo}>
-                <span className={styles.accountInfoTitle}>Delete Account</span>
-                <span className={styles.accountInfoDesc}>Permanently remove your account and all data</span>
-              </div>
-              <button className={styles.dangerBtn} disabled>Delete</button>
-            </div>
           </section>
         </div>
       </div>
